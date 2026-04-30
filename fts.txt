@@ -1,0 +1,96 @@
+Here is a detailed, step-by-step breakdown of what you need to do to complete both Cisco Packet Tracer experiments based on your provided documents.
+Experiment 06: Setting up a Basic LAN (Physical Connections)
+
+The goal of this first experiment is to build the physical network topology using cables, switches, and a router.  
+
+Step 1: Place the Devices
+
+    Launch the Cisco Packet Tracer application.  
+
+    From the device panel at the bottom, drag the following devices into your workspace: 1 Router, 2 Switches, and 4 PCs.  
+
+Step 2: Connect the PCs to the Switches
+
+    Select Copper Straight-Through cables for these connections.  
+
+    Connect PC0 to Switch0 using the FastEthernet0/1 (Fa0/1) port.  
+
+    Connect PC1 to Switch0 using the FastEthernet0/2 (Fa0/2) port.  
+
+    Connect PC2 to Switch1 using the FastEthernet0/1 (Fa0/1) port.  
+
+    Connect PC3 to Switch1 using the FastEthernet0/2 (Fa0/2) port.  
+
+Step 3: Connect the Router to the Switches
+
+    Continue using Copper Straight-Through cables.  
+
+    Connect the Router's GigabitEthernet0/0 (G0/0) port to Switch0's FastEthernet0/24 (Fa0/24) port.  
+
+    Connect the Router's GigabitEthernet0/1 (G0/1) port to Switch1's FastEthernet0/24 (Fa0/24) port.  
+
+Step 4: Verify Physical Connectivity
+
+    Look at the link lights on the cables in your workspace.  
+
+    Green: The connection is active.  
+
+    Orange: The connection is initializing.  
+
+    Red: There is an incorrect cable, or the interface is disabled (which is expected for the router at this stage).  
+
+Step 5: Enable Router Interfaces via CLI
+
+    Click on the Router, go to the CLI tab, and type no when asked to enter the initial configuration dialog.  
+
+    Enter privileged mode by typing enable.  
+
+    Enter configuration mode by typing configure terminal.  
+
+    Access the first interface by typing interface gigabitEthernet 0/0.  
+
+    Turn the port on by typing no shutdown.  
+
+    Type exit.  
+
+    Repeat this exact process for the second interface by typing interface gigabitEthernet 0/1 and then no shutdown.  
+
+Experiment 07: Configuring and Testing IP Addressing
+
+This experiment builds on the previous topology to assign IP addresses so the devices can actually communicate with each other.  
+
+Step 1: Configure the Router's IP Addresses
+
+    Click the Router and open the CLI.  
+
+    Enter configuration mode (enable, then configure terminal).  
+
+    Configure Network 1: Type interface gigabitEthernet 0/0 (or 0/1 depending on your specific router model in the lab), then assign the IP by typing ip address 192.168.1.1 255.255.255.0. Turn it on with no shutdown and type exit.  
+
+    Configure Network 2: Type interface gigabitEthernet 0/1 (or 0/2), assign the IP by typing ip address 192.168.2.1 255.255.255.0, turn it on with no shutdown, and type exit.  
+
+    Save your configuration by typing end to return to privileged mode, followed by write memory.  
+
+Step 2: Configure PC IP Addresses
+
+    For every PC, click on the device, go to the Desktop tab, and select IP Configuration.  
+
+    For PC0: Set IPv4 to 192.168.1.10, Subnet Mask to 255.255.255.0, and Default Gateway to 192.168.1.1.  
+
+    For PC1: Set IPv4 to 192.168.1.11, Subnet Mask to 255.255.255.0, and Default Gateway to 192.168.1.1.  
+
+    For PC2: Set IPv4 to 192.168.2.10, Subnet Mask to 255.255.255.0, and Default Gateway to 192.168.2.1.  
+
+    For PC3: Set IPv4 to 192.168.2.11, Subnet Mask to 255.255.255.0, and Default Gateway to 192.168.2.1.  
+
+Step 3: Test the Connections
+
+    Click on PC0, go to the Desktop tab, and open the Command Prompt.  
+
+    Test within the same network: Type ping 192.168.1.11 (This pings PC1). You should see a successful reply.  
+
+    Test the Router connection: Type ping 192.168.1.1. You should see a successful reply.  
+
+    Test between different networks: Type ping 192.168.2.11 (This pings PC3 across the router). You should see a successful reply.  
+
+    Finally, to verify your router setup, you can open the router CLI and type show ip interface brief to ensure your interfaces read "up" for both Status and Protocol.
