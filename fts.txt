@@ -94,3 +94,130 @@ Step 3: Test the Connections
     Test between different networks: Type ping 192.168.2.11 (This pings PC3 across the router). You should see a successful reply.  
 
     Finally, to verify your router setup, you can open the router CLI and type show ip interface brief to ensure your interfaces read "up" for both Status and Protocol.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A5. Theory: Signal Transmission through Wired and Wireless Media
+
+In computer networking, transmission media is the physical path between a transmitter and a receiver. It is broadly categorized into two types: Guided (Wired) Media, where signals are confined to a physical wire, and Unguided (Wireless) Media, where signals are broadcasted through the air using electromagnetic waves.
+1. Coaxial Cable (Wired Media)
+
+Coaxial cable, commonly known as coax, transmits electrical signals using a two-conductor design that shares a single geometric axis.
+
+Structure & Working:
+It consists of a central copper wire (the inner conductor) surrounded by an insulating layer (dielectric). Over this insulator is a woven or braided metal shield (the outer conductor) that protects against electromagnetic interference (EMI). Finally, the entire cable is wrapped in a protective plastic outer jacket. Data is transmitted as electrical pulses through the central copper core, while the outer shield prevents signal leakage and blocks external noise.
+
+Advantages:
+
+    Supports higher bandwidth and faster data rates than twisted pair cables.
+
+    The braided shield makes it highly resistant to Electromagnetic Interference (EMI) and Radio Frequency Interference (RFI).
+
+    Can transmit data over longer distances without requiring as many repeaters.
+
+Disadvantages:
+
+    Thicker and bulkier, making it harder to bend and install in tight spaces.
+
+    More expensive than standard twisted pair cables.
+
+    A single cable failure can take down an entire network segment in older bus topologies.
+
+Applications:
+
+    Cable television (CATV) distribution.
+
+    Broadband internet connections (cable modems).
+
+    Older local area networks (e.g., 10Base2, 10Base5 Ethernet).
+
+2. Twisted Pair Cable (Wired Media)
+
+Twisted pair is the most widely used networking cable in modern Local Area Networks (LANs).
+
+Structure & Working:
+It consists of multiple pairs of insulated copper wires that are twisted around each other. The twisting is a crucial engineering feature; it cancels out electromagnetic interference from external sources and minimizes "crosstalk" (interference between adjacent pairs within the cable). There are two main types: Unshielded Twisted Pair (UTP), which relies solely on the twists for protection, and Shielded Twisted Pair (STP), which adds a foil shield for extra EMI protection.
+
+Advantages:
+
+    Highly cost-effective and inexpensive to manufacture.
+
+    Thin, lightweight, and very flexible, making it extremely easy to install.
+
+    Widely standardized and compatible with almost all modern Ethernet hardware.
+
+Disadvantages:
+
+    Highly susceptible to external noise and EMI, especially UTP variants.
+
+    Suffers from higher attenuation (signal loss), meaning cables are generally limited to a 100-meter range before needing a switch or repeater.
+
+    Lower bandwidth capacity compared to fiber optic alternatives.
+
+Applications:
+
+    Modern Ethernet LAN setups (e.g., Cat5e, Cat6, Cat6a for gigabit networks).
+
+    Traditional landline telephone networks.
+
+3. Wi-Fi (Wireless Media)
+
+Wi-Fi (Wireless Fidelity) is a popular wireless networking technology that allows devices to communicate without physical cables, forming a Wireless Local Area Network (WLAN).
+
+Structure & Working:
+Wi-Fi operates using radio frequency (RF) waves, primarily transmitting over the 2.4 GHz, 5 GHz, and 6 GHz frequency bands. It relies on the IEEE 802.11 standards. A wireless router or access point acts as a central hub, receiving wired internet data, translating it into radio waves, and broadcasting it. Devices with Wi-Fi adapters (like laptops and smartphones) receive these waves and convert them back into digital data.
+
+Advantages:
+
+    Excellent mobility, allowing users to roam freely within the coverage area while staying connected.
+
+    Easy scalable and allows for the quick addition of new devices without running new cables.
+
+    Eliminates cable clutter in homes and offices.
+
+Disadvantages:
+
+    Subject to interference from other physical obstacles (walls, metal) and electronic devices (microwaves, other routers).
+
+    Speed and signal strength degrade significantly as distance from the router increases.
+
+    Inherently less secure than wired networks, requiring strong encryption (like WPA3) to prevent unauthorized access.
+
+Applications:
+
+    Home, corporate, and campus wireless internet access.
+
+    Public hotspots in cafes, airports, and hotels.
+
+    Internet of Things (IoT) devices like smart TVs, security cameras, and smart thermostats.
+
+4. Bluetooth (Wireless Media)
+
+Bluetooth is a short-range wireless communication technology designed for exchanging data over very short distances between fixed and mobile devices.
+
+Structure & Working:
+Like Wi-Fi, Bluetooth uses radio waves in the 2.4 GHz ISM frequency band, based on the IEEE 802.15.1 standard. However, it uses a technique called frequency-hopping spread spectrum (FHSS), which switches rapidly among 79 different frequencies to avoid interference. Devices establish a "piconet" (a small, ad-hoc network) to pair directly with one another without needing a central router.
+
+Advantages:
+
+    Extremely low power consumption, making it ideal for battery-operated devices.
+
+    Easy to set up with automatic, router-free pairing between two devices.
+
+    Low cost to integrate into hardware.
+
+Disadvantages:
+
+    Very short operational range (typically 10 to 30 meters depending on the class).
+
+    Low data transfer speeds compared to Wi-Fi or wired connections.
+
+    Can occasionally suffer from interference if too many 2.4 GHz devices are operating in the same small space.
+
+Applications:
+
+    Connecting wireless peripherals to computers and phones (mice, keyboards, headsets, speakers).
+
+    Pairing smartphones with car infotainment systems.
+
+    Short-range file transfers between local devices.
